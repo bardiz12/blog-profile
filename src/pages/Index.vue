@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <Profile class="animated bounceIn" :linkbawah="true" :showdesc="true"/>
+    <Profile large class="animated bounceIn" :linkbawah="true" :showdesc="true"/>
   </Layout>
 </template>
 
@@ -8,7 +8,7 @@
 import Profile from "../components/Profile";
 export default {
   metaInfo: {
-    title: "Hello, world!"
+    title: "Portfolio"
   },
   components: {
     Profile

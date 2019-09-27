@@ -6,8 +6,7 @@ author: Bardizba
 keywords: best, blog post
 description: The best blog post ever.
 excerpt: Ini adalah Contoh postingan pertama
-tags :
-    - vue
+tags : ["vue"]
 ---
 
 # The best header

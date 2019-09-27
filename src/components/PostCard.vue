@@ -14,7 +14,13 @@
         <v-icon size="15">person</v-icon>Bardizba Z
       </li>
       <li>
-        <v-icon size="15">folder</v-icon>Tag1,tag2
+        <v-icon size="15">folder</v-icon>
+        <div class="tags">
+          <span v-for="(tag,index) in post.node.tags" v-bind:key="tag.id">
+            <g-link :to="tag.path">{{tag.id}}</g-link>
+            <span v-if="index != post.node.tags.length - 1">, </span>
+          </span>
+        </div>
       </li>
     </ul>
     <div class="mt-5"></div>
@@ -23,46 +29,7 @@
 </template>
 
 <style lang="scss">
-.blog-post {
-  & hr {
-    color: #ddd;
-    background-color: #ddd;
-    border: none;
-    height: 1px;
-  }
-  & h1.post-title {
-    & a {
-      color: black;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-  & ul.post-meta {
-    list-style: none;
-    padding: 0;
-    font-size: 10pt;
-    color: rgb(143, 143, 143);
-    & li {
-      padding-right: 15px;
-      display: inline-block;
-    }
-  }
-}
 
-.theme--dark {
-  .blog-post h1.post-title a {
-    color: #fff !important;
-  }
-  .blog-post ul.post-meta {
-    color: rgb(221, 221, 221) !important;
-  }
-  .blog-post hr {
-      color: rgb(122, 122, 122) !important;
-    background-color: rgb(95, 95, 95) !important;
-  }
-}
 </style>
 
 <script>

@@ -16,29 +16,27 @@ module.exports = {
         typeName: 'Post',
         route: '/blog/read/:year/:slug',
         refs: {
-          // if you have a field with tag ids named 'tags':
-          tags: 'Tag',
-          // or auto create all tags based on the 'tags' field:
           tags: {
             typeName: 'Tag',
-            route: '/blog/tag/:id',
+            route: '/blog/tag/:slug',
             create: true
-          }
+          },
+        },
+        remark: {
+          plugins: ['@gridsome/remark-prismjs']
         }
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'static/tags/*.md',
-        typeName: 'Tag',
-        route: '/blog/tag/:id'
+        path: 'static/projects/**/*.md',
+        typeName: 'Project',
+        route: '/project/:slug'
       }
-    }
+    },
   ],
   transformers: {
-    remark: {
-      externalLinksTarget: '_blank'
-    }
+    
   }
 }

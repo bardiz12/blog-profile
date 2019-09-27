@@ -1,6 +1,12 @@
+
 <template>
   <MainApp>
     <div class="blog">
+      <center>
+        Every Post under :
+        <strong>#{{$route.params.slug}}</strong>
+      </center>
+      <div class="mt-2"></div>
       <p v-for="post in $page.posts.edges" v-bind:key="post.slug">
         <PostCard :post="post" />
       </p>
@@ -12,8 +18,8 @@
 <style lang="scss">
 </style>
 <page-query>
-query Posts ($page: Int) {
-  posts: allPost (perPage: 5, page: $page) @paginate {
+query Posts ($id: String,$page: Int) {
+  posts: allPost (perPage: 5, page: $page,filter: {tags: {contains: [$id]}}) @paginate {
     totalCount
     pageInfo {
       totalPages
@@ -24,27 +30,23 @@ query Posts ($page: Int) {
     edges {
       node {
         title
-        excerpt
         path
-        author
-        date(format: "D MMMM YYYY")
-        tags{
-            id
-            path
+        date (format: "D. MMMM YYYY")
+        excerpt
+        tags {
+          id
+          path
         }
       }
     }
   }
-  }
+}
 </page-query>
 <script>
 import MainApp from "@/components/MainApp";
 import { Pager } from "gridsome";
 import PostCard from "@/components/PostCard";
 export default {
-  metaInfo: {
-    title: "Blog"
-  },
   components: {
     PostCard,
     Pager,

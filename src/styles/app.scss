@@ -1,6 +1,10 @@
 @import './variables.scss';
 .v-application {
   font-family: "Questrial", sans-serif;
+
+  & ul {
+    padding: 0 !important;
+  }
 }
 .profile {
   & hr {
@@ -50,6 +54,14 @@
   }
 }
 
+.socmed-links{
+  & a{
+    margin: 0px 5px;
+    font-size: 20pt;
+    color: #303030 !important;
+    text-decoration: none;
+  }
+}
 
 .main-app {
   & .kiri {
@@ -114,6 +126,11 @@
   
 }
 .theme--dark{
+  .socmed-links{
+    & a{
+      color: #fafafa!important;
+    }
+  }
   .main-app .kanan .content{
       background-color: #303030 !important;
   }
@@ -159,6 +176,70 @@
     & a.active{
       border-bottom: 1px solid #fff;
     }
+  }
+}
+
+.blog-post {
+  & hr {
+    color: #ddd;
+    background-color: #ddd;
+    border: none;
+    height: 1px;
+  }
+  & h1.post-title {
+    & a {
+      color: black;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+ul.post-meta {
+  list-style: none;
+  padding: 0;
+  font-size: 10pt;
+  color: rgb(143, 143, 143);
+  & li {
+    padding-right: 15px;
+    display: inline-block;
+    & .tags {
+      display: inline;
+      margin-left: 5px;
+      & span a {
+        text-decoration: none;
+        color: rgb(100, 100, 100);
+        font-weight: 700;
+        &:before {
+          content: "#";
+        }
+      }
+    }
+  }
+}
+
+#tooglerTheme {
+  cursor: pointer;
+}
+.hire-button{
+  background-color: #fafafa;
+}
+
+.theme--dark {
+  .blog-post h1.post-title a {
+    color: #fff !important;
+  }
+  ul.post-meta {
+    color: rgb(221, 221, 221) !important;
+    & li .tags span a {
+      color: #fafafa;
+    }
+  }
+  .blog-post hr {
+    color: rgb(122, 122, 122) !important;
+    background-color: rgb(95, 95, 95) !important;
   }
 }
 

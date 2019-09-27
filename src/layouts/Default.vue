@@ -9,7 +9,7 @@
       </nav>
       
   </header>-->
-  <v-app class="pa-0 my-app" transition="fade-transition">
+  <v-app class="pa-0 my-app">
     <slot />
   </v-app>
 </template>
