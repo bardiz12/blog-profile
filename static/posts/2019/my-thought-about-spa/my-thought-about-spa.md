@@ -9,6 +9,10 @@ excerpt: Ini adalah SPA ITU SEPERTI INI
 tags : ["vue","first"]
 ---
 ![](./seulgi1.jpg)
+```bash
+chmod +x 775
+```
+
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu velit placerat lorem commodo condimentum. Nulla dignissim augue massa, dictum accumsan massa euismod sed. Nam tincidunt nunc non tellus luctus condimentum. Aenean cursus velit sed vehicula bibendum. Aliquam erat volutpat. Sed dictum pharetra massa eget eleifend. Nulla sollicitudin nibh non enim maximus lacinia. Morbi mattis turpis dui, ultrices elementum velit congue euismod. Integer ac condimentum velit. Morbi mollis, mi sit amet imperdiet commodo, lorem lacus gravida dui, quis sagittis diam mi quis sem. Donec lectus velit, aliquam et ligula vel, eleifend sagittis nulla.
 

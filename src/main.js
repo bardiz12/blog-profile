@@ -5,6 +5,9 @@ import Layout from '~/layouts/Default.vue';
 
 import '~/styles/app.scss';//
 import Vuex from 'vuex';
+//import 'prismjs/themes/prism.css'
+
+import '~/styles/prism-atom.css';
 export default function (Vue, { appOptions, router, head, isClient }) {
 
   router.beforeEach((to, from, next) => {

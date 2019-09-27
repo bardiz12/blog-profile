@@ -5,6 +5,14 @@
   & ul {
     padding: 0 !important;
   }
+  & .content code{
+    background-color: transparent !important;
+    color: inherit !important;
+    box-shadow: none !important;
+    &:before{
+      content:'' !important;
+    }
+  }
 }
 .profile {
   & hr {
@@ -113,6 +121,9 @@
       padding: 20px 25px;
       background-color: #FAFAFA;
       margin-top: 50px;
+      & img{
+        width: 100%;
+      }
     }
   }
 }
