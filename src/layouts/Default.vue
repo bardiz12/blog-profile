@@ -24,18 +24,17 @@ query {
 
 <script>
 export default {
-  methods: {
-
-  },
+  methods: {},
   mounted() {
+    //this.$vuetify.theme.dark = this.isDarkEnabled;
     //this.$vuetify.theme.dark = false;
   }
 };
 </script>
 
 <style lang="scss">
-@import '../styles/variables';
-.my-app{
+@import "../styles/variables";
+.my-app {
   transition: $trans-25;
 }
 /*body {

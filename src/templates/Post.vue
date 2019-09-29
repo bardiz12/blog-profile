@@ -31,16 +31,18 @@
 </style>
 <page-query>
 query  Post ($path: String!) {
-  post: post (path: $path) {
+  post (path: $path) {
     title
     content
     author
     date (format: "D. MMMM YYYY")
     description
+    
     tags{
         id
         path
     }
+    
   }
 }
 </page-query>

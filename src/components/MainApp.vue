@@ -1,13 +1,13 @@
 <template>
   <Layout>
-    <v-container fluid class="pa-0">
+    <v-container fluid class="pa-0 animated slideInDown">
       <div class="main-app">
-        <div class="kiri animated fadeInLeft">
+        <div class="kiri">
           <Profile :socmed="true" />
         </div>
         <div class="kanan">
-          <Menuatas class="animated fadeInDown" />
-          <div class="content animated fadeInRight">
+          <Menuatas/>
+          <div class="content">
             <slot></slot>
           </div>
         </div>

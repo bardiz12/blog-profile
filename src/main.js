@@ -2,9 +2,8 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 import Vuetify from 'vuetify';
 import Layout from '~/layouts/Default.vue';
-
+import '../node_modules/vuetify/dist/vuetify'
 import '~/styles/app.scss';//
-import Vuex from 'vuex';
 //import 'prismjs/themes/prism.css'
 
 import '~/styles/prism-atom.css';
@@ -15,10 +14,10 @@ export default function (Vue, { appOptions, router, head, isClient }) {
     return next();
   });
   // Set default layout as a global component
-  head.link.push({
+  /*head.link.push({
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css?family=Questrial&display=swap'
-  });
+  });*/
   head.link.push({
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
@@ -31,10 +30,10 @@ export default function (Vue, { appOptions, router, head, isClient }) {
     rel: 'stylesheet',
     href: 'https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.0.19/vuetify.min.css'
   });
-  /*head.link.push({
+  head.link.push({
     rel: 'stylesheet',
     href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css'
-  });*/
+  });
   Vue.use(Vuetify,{
     /*light: {
       background: '#cccccc',
@@ -51,20 +50,10 @@ export default function (Vue, { appOptions, router, head, isClient }) {
       error: '#b71c1c'
     }*/
   });
-  Vue.use(Vuex);
-  appOptions.store = new Vuex.Store({
-    state:{
-      isDark:false
-    },
-    mutations: {
-      toggleDark(state) {
-        state.isDark = !state.isDark;
-      }
-    }
-  });
+  var is_dark_enabled = localStorage.getItem('is_dark_enabled') !== null ? parseInt(localStorage.getItem('is_dark_enabled')) === 1 ? true : false : false;
   const opts = {
     theme: {
-      dark: false,
+      dark: is_dark_enabled,
       //      primary: '#b747ff' //,
       // success: '',
       // info: '',
@@ -72,6 +61,23 @@ export default function (Vue, { appOptions, router, head, isClient }) {
     }
   };
   appOptions.vuetify = new Vuetify(opts);
+  
+
+  Vue.mixin({
+    data: function() {
+      return {
+        isDarkEnabled: is_dark_enabled
+      }
+    },
+    watch:{
+      isDarkEnabled: function(val){
+        localStorage.setItem('is_dark_enabled',val ? 1 : 0);
+      }
+    }
+  })
+  console.log(appOptions);
   Vue.component('Layout', Layout);
+
+  //console.log(Vue.$vuetify);
 
 }

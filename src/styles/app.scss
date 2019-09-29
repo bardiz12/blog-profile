@@ -1,4 +1,8 @@
 @import './variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+body{
+  scroll-behavior: smooth !important;
+}
 .v-application {
   font-family: "Questrial", sans-serif;
 
@@ -30,6 +34,10 @@
     width: 75%;
     max-width: 225px;
     align-content: center;
+    transition: $trans-25;
+    &:hover{
+      border-radius: 20px;
+    }
   }
 
   & div.pembatas {
@@ -52,8 +60,9 @@
           display: inline;
           padding: 0px 5px;
           & a{
+              text-transform: uppercase;
               padding-bottom: 2px;
-              font-size: 13pt;
+              font-size: 15pt;
               text-decoration: none;
               border-bottom: 1px solid #ddd;
           }
@@ -73,6 +82,7 @@
 
 .main-app {
   & .kiri {
+    transition: $trans-25;
     position: fixed;
     top: 0;
     left: 0;
@@ -82,9 +92,13 @@
   }
 
   & .kanan {
+    transition: $trans-25;
     width: 60%;
     margin-left: 40%;
     display: block;
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow: scroll;
 
     & .menu-atas {
       font-size: 10pt;
@@ -239,6 +253,12 @@ ul.post-meta {
 }
 
 .theme--dark {
+  .kiri {
+    border-color: #464545;
+  }
+  .menu-atas{
+    border-color: #464545 !important;
+  }
   .blog-post h1.post-title a {
     color: #fff !important;
   }

@@ -8,8 +8,8 @@
           <template v-if="showdesc">
             <div class="mt-3"></div>
             <p>
-              <strong>Hello</strong>, I'm Moch Bardizba Zuhallalwansyach. I am a
-              <strong>Web Developer</strong>.most of the projects i build is using Laravel for the backend and Vue or Jquery for the Frontend. and I also a Students at Semarang State University.
+              <strong>Hello</strong>, I am Moch <u style="font-weight:400">Bard</u>izba Zuhallalwansyach. a Freelance
+              <strong>Web Developer</strong> from Indonesia. Most of the projects i build are using Laravel for the backend and Vue or Jquery for the Frontend. I also a Student of Semarang State University.
             </p>
             <div class="mt-10"></div>
           </template>
@@ -37,13 +37,16 @@
             <div class="mt-10"></div>
             <ul class="links">
               <li>
+                <g-link class="link-second" to="/">Home</g-link>
+              </li>
+              <li>
                 <g-link class="link-second" to="/blog">Blog</g-link>
               </li>
               <li>
-                <a class="link-second" href="#">My Projects</a>
+                <g-link class="link-second" to="/projects">Projects</g-link>
               </li>
               <li>
-                <a class="link-second" href="#">About</a>
+                <g-link class="link-second" to="/about#about">About</g-link>
               </li>
             </ul>
           </template>
@@ -58,6 +61,7 @@
             </div>
           </div>
         </div>
+        <slot></slot>
       </v-flex>
     </v-layout>
   </v-container>
@@ -67,9 +71,12 @@
 export default {
   methods: {
     goDark() {
-      this.$store.commit("toggleDark");
-      this.$vuetify.theme.dark = this.$store.state.isDark;
+      this.isDarkEnabled = ! this.isDarkEnabled;
+      this.$vuetify.theme.dark = this.isDarkEnabled;
     }
+  },
+  mounted(){
+    //console.log(this.$isDarkEnabled);
   },
   props: ["linkbawah", "socmed", "showdesc","large"]
 };
