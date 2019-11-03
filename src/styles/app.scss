@@ -277,6 +277,22 @@ ul.post-meta {
     color: rgb(122, 122, 122) !important;
     background-color: rgb(95, 95, 95) !important;
   }
+
+
+  .social-share-button{
+    & a{
+      transition: $trans-25;
+      padding: 10px 0px;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      color: #fff !important;
+      background-color: #303030 !important;
+      &:hover{
+        background-color: #464545 !important;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 700px){
@@ -301,4 +317,49 @@ ul.post-meta {
     }
   }
 
+}
+
+.social-share {
+  display: block;
+  text-align: center;
+  & > span{
+    font-weight: 800;;
+  }
+  & .social-share-button{
+    display: flex;
+    justify-content:space-between;
+    color:white;
+    & a{
+      transition: $trans-25;
+      padding: 10px 0px;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      color: #fff !important;
+      &.whatsapp{
+        background-color: #24CD63;
+        &:hover{
+          background-color: rgb(27, 153, 73);
+        }
+      }
+      &.telegram{
+        background-color: #20B5E1;
+        &:hover{
+          background-color: rgb(23, 130, 163);
+        }
+      }
+      &.facebook{
+        background-color: #395599;
+        &:hover{
+          background-color: #2a3e70;
+        }
+      }
+      &.twitter{
+        background-color: #1C9DEB;
+      }
+      &:hover{
+        background-color: rgb(21, 120, 182);
+      }
+    }
+  }
 }

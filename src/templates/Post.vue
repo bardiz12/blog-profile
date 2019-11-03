@@ -1,6 +1,6 @@
 <template>
   <MainApp>
-    <div class="blog animated fadeInUp">
+    <div class="blog animated">
       <h1 v-if="$page.post">{{ $page.post.title }}</h1>
       <div v-if="$page.post" class="h4 pb-3">
         <ul class="post-meta">
@@ -24,15 +24,19 @@
       </div>
       <div v-if="$page.post" v-html="$page.post.content"></div>
     </div>
+    <SocialShare :title="$page.post.title"/>
+    <vue-disqus shortname="bardizpen" :identifier="$page.post.slug"></vue-disqus>
   </MainApp>
 </template>
 
 <style lang="scss">
+
 </style>
 <page-query>
 query  Post ($path: String!) {
   post (path: $path) {
     title
+    slug
     content
     author
     date (format: "DD MMMM YYYY")
@@ -58,11 +62,21 @@ query  Post ($path: String!) {
 import MainApp from "@/components/MainApp";
 import { Pager } from "gridsome";
 import PostCard from "@/components/PostCard";
+import SocialShare from "@/components/SocialShare";
 export default {
   components: {
     PostCard,
     Pager,
-    MainApp
+    MainApp,
+    SocialShare
+  },
+  metaInfo(){
+    return {
+    title: this.$page.post.title,
+    }
+  },
+  mounted(){
+    console.log(this.$page.post.slug);
   }
 };
 </script>
