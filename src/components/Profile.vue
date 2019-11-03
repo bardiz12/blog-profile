@@ -35,20 +35,12 @@
           <!--<hr>-->
           <template v-if="linkbawah">
             <div class="mt-10"></div>
-            <ul class="links">
-              <li>
+            <div class="links">
                 <g-link class="link-second" to="/">Home</g-link>
-              </li>
-              <li>
                 <g-link class="link-second" to="/blog">Blog</g-link>
-              </li>
-              <li>
                 <g-link class="link-second" to="/projects">Projects</g-link>
-              </li>
-              <li>
                 <g-link class="link-second" to="/about#about">About</g-link>
-              </li>
-            </ul>
+            </div>
           </template>
           <div class="mt-2">
             <div id="tooglerTheme" @click="goDark()">

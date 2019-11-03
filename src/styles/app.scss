@@ -7,7 +7,7 @@ body{
   font-family: "Questrial", sans-serif;
 
   & ul {
-    padding: 0 !important;
+    //padding: 0 !important;
   }
   & .content code{
     background-color: transparent !important;
@@ -52,22 +52,25 @@ body{
   & .link-second{
     color: rgb(100, 100, 100);
   }
-  & ul.links{
-      list-style: none;
+  & div.links{
       display: block;
       padding: 0px;
-      & li {
-          display: inline;
+          
+      & a{
+          display: inline-block;
           padding: 0px 5px;
-          & a{
-              text-transform: uppercase;
-              padding-bottom: 2px;
-              font-size: 15pt;
-              text-decoration: none;
-              border-bottom: 1px solid #ddd;
+          text-transform: uppercase;
+          padding-bottom: 2px;
+          font-size: 15pt;
+          text-decoration: none;
+          border-bottom: 1px solid #ddd;
+
+          &:hover{
+            color: #464545;
           }
-         
       }
+         
+
   }
 }
 
@@ -81,6 +84,34 @@ body{
 }
 
 .main-app {
+  & .menu-atas {
+    font-size: 10pt;
+    position: absolute;
+    width: 60%;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #ddd;
+    display: block;
+    & ul.links {
+      list-style: none;
+      display: block;
+
+      & li {
+        transition: all 0.25s ease-in-out;
+        display: inline-block;
+        padding: 15px 10px;
+        align-items: center;
+        & a {
+          text-decoration: none;
+          color: black;
+        }
+        &:hover {
+          background-color: rgb(236, 236, 236);
+        }
+      }
+    }
+  }
   & .kiri {
     transition: $trans-25;
     position: fixed;
@@ -100,34 +131,7 @@ body{
     scroll-behavior: smooth;
     overflow: scroll;
 
-    & .menu-atas {
-      font-size: 10pt;
-      position: fixed;
-      width: 60%;
-      right: 0;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid #ddd;
-      display: block;
-      & ul.links {
-        list-style: none;
-        display: block;
-
-        & li {
-          transition: all 0.25s ease-in-out;
-          display: inline-block;
-          padding: 15px 10px;
-          align-items: center;
-          & a {
-            text-decoration: none;
-            color: black;
-          }
-          &:hover {
-            background-color: rgb(236, 236, 236);
-          }
-        }
-      }
-    }
+    
 
     & .content {
       text-align: left;
@@ -224,7 +228,8 @@ body{
 
 ul.post-meta {
   list-style: none;
-  padding: 0;
+  
+  padding: 0 !important;
   font-size: 10pt;
   color: rgb(143, 143, 143);
   & li {
@@ -276,6 +281,11 @@ ul.post-meta {
 
 @media screen and (max-width: 700px){
   .main-app{
+    & .menu-atas{
+      position: sticky;
+      width: 100%;
+      left:0;
+    }
     & .kiri{
       height: auto;
       margin-top: 50px;
@@ -286,10 +296,8 @@ ul.post-meta {
     & .kanan{
       width: 100%;
       margin-left: 0;
-      & .menu-atas{
-        width: 100%;
-        left:0;
-      }
+      overflow: none;
+      
     }
   }
 

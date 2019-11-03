@@ -2,11 +2,12 @@
   <Layout>
     <v-container fluid class="pa-0 animated slideInDown">
       <div class="main-app">
+        <Menuatas/>
         <div class="kiri">
           <Profile :socmed="true" />
         </div>
         <div class="kanan">
-          <Menuatas/>
+          
           <div class="content">
             <slot></slot>
           </div>

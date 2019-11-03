@@ -3,11 +3,11 @@
     <Profile :linkbawah="true" :showdesc="true" :large="true" :socmed="true">
       <div id="about"></div>
       <div class="mt-5"></div>
-      <h1 class="headline">
+      <h1 class="headline animated fadeInUp">
         <i class="fa fa-briefcase"></i> Education & Work Experience
       </h1>
-      <v-timeline :dense="true">
-        <v-timeline-item v-for="(education, i) in educations" :key="i" color="grey lighten-2" small>
+      <v-timeline :dense="true" class="animated fadeInUp">
+        <v-timeline-item :class="`animated fadeInLeft delay-1s`" v-for="(education, i) in educations" :key="i" color="grey lighten-2" small>
           <template v-slot:opposite>
             <span :class="`headline font-weight-bold`" v-text="education.year"></span>
           </template>
@@ -19,15 +19,16 @@
       </v-timeline>
 
       <div class="mt-5"></div>
-      <h1 class="headline">
+      <h1 class="headline animated fadeInUp">
         <i class="fa fa-star"></i> Achievement
       </h1>
-      <v-timeline :dense="true">
+      <v-timeline :dense="true" class="animated fadeInUp">
         <v-timeline-item
           v-for="(education, i) in achievements"
           :key="i"
           color="grey lighten-2"
           small
+          class="animated fadeInLeft delay-1s"
         >
           <template v-slot:opposite>
             <span :class="`headline font-weight-bold`" v-text="education.year"></span>

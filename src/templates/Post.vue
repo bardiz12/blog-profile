@@ -3,7 +3,7 @@
     <div class="blog animated fadeInUp">
       <h1 v-if="$page.post">{{ $page.post.title }}</h1>
       <div v-if="$page.post" class="h4 pb-3">
-        <ul class="post-meta mt-n2">
+        <ul class="post-meta">
           <li>
             <v-icon size="15">calendar_today</v-icon>
             {{$page.post.date}}
@@ -35,7 +35,7 @@ query  Post ($path: String!) {
     title
     content
     author
-    date (format: "D. MMMM YYYY")
+    date (format: "DD MMMM YYYY")
     description
     
     tags{
@@ -47,6 +47,14 @@ query  Post ($path: String!) {
 }
 </page-query>
 <script>
+/*edges (sort: [{ by: "group", order: ASC }, { by: "weight", order: ASC }]) {
+      previous {
+        title
+      }
+      next {
+        title
+      }
+    }*/
 import MainApp from "@/components/MainApp";
 import { Pager } from "gridsome";
 import PostCard from "@/components/PostCard";
