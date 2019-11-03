@@ -1,5 +1,5 @@
 <template>
-    <div class="social-share mt-10 mb-10">
+    <div class="social-share">
       <span>Share to your friends!</span>
       <div class="social-share-button">
           

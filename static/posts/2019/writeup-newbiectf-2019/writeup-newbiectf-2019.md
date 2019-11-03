@@ -73,3 +73,27 @@ dan dipatkan flag :
 KorNewbie{H311o_h0w_@r3_y0u_d0lng?}
 ```
 
+---
+# Web Hacking
+## Normal_Host
+```
+Normal_Host
+
+This is Just a Normal Host! Can you hack?
+Author: Y311J(신재욱)
+LINK:
+
+```
+[LINK](https://internal.iwinv.net/)
+
+Awalnya pada kategori web hacking memiliki 2 Chals, dan 2 chals tersebut berada pada satu server. saat saya coba mencari flag chals pertama(chals tersebut bertipe RCE PHP) ternyata malah ketemu flag untuk chals yang ini wkwk.
+
+untuk mendapatkan flag pada chals ini masukan payload :
+```
+normalflag.iwinv.net:80
+```
+
+Flag : 
+```
+KorNewbie{H0$7_$P1it_A774cK_U$3s_N0RM^liZ47ioN&##$%%!}
+```
