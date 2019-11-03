@@ -18,10 +18,13 @@ export default {
     data(){
         return {
             data:{
-                url:encodeURI(window.location.href),
+                url:null,
                 title:encodeURI(this.title)
             }
         }
+    },
+    mounted(){
+        this.data.url = window.location.href;    
     }
 }
 </script>

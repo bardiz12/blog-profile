@@ -79,8 +79,10 @@ appOptions.vuetify = new Vuetify(opts);
 
 Vue.mixin({
   data: function () {
+    
+
     return {
-      isDarkEnabled: is_dark_enabled
+      isDarkEnabled: is_dark_enabled,
     }
   },
   watch: {
