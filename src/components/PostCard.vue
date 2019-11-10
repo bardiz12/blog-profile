@@ -1,10 +1,10 @@
 <template>
   <div class="blog-post">
-    <h1 class="post-title">
+    <h3 class="post-title">
       <g-link :to="post.node.path">{{ post.node.title }}</g-link>
-    </h1>
+    </h3>
 
-    <p class="post-summary" style="text-align:justify" v-html="post.node.excerpt"></p>
+    <p class="post-summary mt-2" style="text-align:justify" v-html="post.node.excerpt"></p>
     <ul class="post-meta mt-n2">
       <li>
         <v-icon size="15">calendar_today</v-icon>

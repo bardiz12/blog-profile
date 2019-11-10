@@ -9,15 +9,13 @@ excerpt: Index of My Writeup JHDigitalCTF (John Hammond Digital CTF) 2019
 tags : ["ctf","jhdctf"]
 ---
 ![index](./pics/index.png)
-Hi! aku bikin writeup ini cuma buat sebagai catatan pengingat aja, jadi kalo ntar ada CTF lagi, dan kalo ada problem yang sama bisa jadi cheatsheet nya wkwkw. becanda deng. writeup ini dibuat semampu saya, karena ilmu saya dalam Cyber Security masih cetek sekali. tapi lumayan bisa ngerjain beberapa soal di CTF ini btw nickname aku _gravedigger_.
-
-Karena CTF nya udah selesai juga, makanya aku publish hehe. kalo ada kurangnya mohon maaf hehe 🤣. 
+Hi! aku bikin writeup ini cuma buat sebagai catatan pengingat aja, jadi kalo ntar ada CTF lagi, bisa buat pengingat gitu. soal - soal di JHDigitalCTF ini lumayan beragam. Karena CTF nya udah selesai juga, makanya aku publish. kalo ada kurangnya mohon maaf yaa 🤣. 
 
 1. ### [Web](/blog/read/2019/writeup-jhdigital-ctf-web)
-    * The Bomb
-    * Hot Access
-    * Magician
-    * PHPJuggler
+    * [The Bomb](/blog/read/2019/writeup-jhdigital-ctf-web#the-bomb)
+    * [Hot Access](/blog/read/2019/writeup-jhdigital-ctf-web#hot-access)
+    * [Magician](/blog/read/2019/writeup-jhdigital-ctf-web#magician)
+    * [PHPJuggler](/blog/read/2019/writeup-jhdigital-ctf-web#phpjuggler)
     * GLHF
     * JaWT
     * MASK
@@ -56,7 +54,4 @@ Karena CTF nya udah selesai juga, makanya aku publish hehe. kalo ada kurangnya m
     * CALC-UL8R
 
 
-PS : link per problem di update besok,atau besoknya lagi.s
-
-## Tweet Dari Owner Platform nya :
-https://twitter.com/_johnhammond/status/1193207579092115456
+PS : link per problem di update besok,atau besoknya lagi.

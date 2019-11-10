@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <Profile large class="animated bounceIn" :linkbawah="true" :showdesc="true"/>
+    <Profile large class="animated bounceIn" :linkbawah="true" :showdesc="true" :mini="true"/>
   </Layout>
 </template>
 

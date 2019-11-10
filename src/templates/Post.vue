@@ -41,7 +41,6 @@ query  Post ($path: String!) {
     author
     date (format: "MMM DD, YYYY")
     description
-    
     tags{
         id
         path
