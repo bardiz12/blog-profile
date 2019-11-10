@@ -5,7 +5,7 @@
         <div class="profile">
           <g-image src="@/assets/profile2.jpg" alt="Photo" class="profile-img"></g-image>
           <h1 class="font-weight-thin d-none">Bardiz</h1>
-           <h3 class="text-uppercase">Bardizba</h3>
+           <h3 v-if="!mini ? $store.state.isSidebarShowed : true" class="text-uppercase">Bardizba</h3>
           <template v-if="showdesc">
             <div class="mt-3"></div>
            
