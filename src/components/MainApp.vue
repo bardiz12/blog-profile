@@ -16,7 +16,7 @@
           <Profile :socmed="true" />
         </div>
         <div v-bind:class="`kanan ${!$store.state.isSidebarShowed ? 'kanan-mini' : ''}`">
-          <div class="content">
+          <div class="content" v-bind:style="`${fullContent ? 'padding:0px' : ''}`">
             <slot></slot>
           </div>
         </div>
@@ -31,6 +31,7 @@
 import Profile from "@/components/Profile";
 import Menuatas from "@/components/Menuatas";
 export default {
+  props:['fullContent'],
   methods: {
     toggleSB: function() {
       console.log(this.$store.state.isSidebarShowed);

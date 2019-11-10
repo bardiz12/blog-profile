@@ -1,5 +1,5 @@
 <template>
-  <MainApp>
+  <MainApp :fullContent="true">
       <div class="project-header">
         <div class="project-header--kanan">
           <h1>Under Construction:(</h1>
@@ -10,8 +10,7 @@
       </div>
   </MainApp>
 </template>
-
-<style lang="scss">
+<style lang="scss" scoped>
 .menu-atas {
   //margin-top: -100px;
   &:hover{
@@ -19,9 +18,6 @@
   }
 }
 
-.content{
-  padding: 0px !important;
-}
 </style>
 
 <script>
