@@ -8,7 +8,7 @@ import '~/styles/app.scss';//
 import Vuex from 'vuex'
 import '~/styles/prism-atom.css';
 import VueDisqus from 'vue-disqus'
-import {toggleSidebar} from './mixins/toggleSidebar';
+
 
 
 
