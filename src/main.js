@@ -117,7 +117,6 @@ export default function (Vue, { appOptions, router, head, isClient }) {
     }
   })
   Vue.use(Vuex);
-  Vue.mixin(toggleSidebar)
   console.log(appOptions);
   Vue.component('Layout', Layout);
   Vue.use(VueDisqus)
