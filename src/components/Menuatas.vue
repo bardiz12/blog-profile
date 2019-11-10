@@ -9,6 +9,12 @@
       <li>
         <g-link to="/blog">Blog</g-link>
       </li>
+      <li>
+        <g-link to="/projects">Projects</g-link>
+      </li>
+      <li>
+        <g-link to="/about">About</g-link>
+      </li>
     </ul>
   </div>
 </template>
