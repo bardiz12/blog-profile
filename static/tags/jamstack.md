@@ -1,0 +1,4 @@
+---
+title: jamstack
+id: jamstack
+---

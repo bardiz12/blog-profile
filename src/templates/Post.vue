@@ -24,8 +24,8 @@
       </div>
       <div v-if="$page.post" v-html="$page.post.content"></div>
     </div>
-    <SocialShare :title="$page.post.title"/>
-    <vue-disqus shortname="bardizpen" :identifier="$page.post.slug"></vue-disqus>
+    <SocialShare style="margin-top:100px" :title="$page.post.title"/>
+    <vue-disqus shortname="bardizpen" :identifier="$page.post.slug" :key="$vuetify.theme.dark"></vue-disqus>
   </MainApp>
 </template>
 
@@ -39,7 +39,7 @@ query  Post ($path: String!) {
     slug
     content
     author
-    date (format: "DD MMMM YYYY")
+    date (format: "MMM DD, YYYY")
     description
     
     tags{

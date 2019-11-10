@@ -5,6 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
+  icon: './src/assets/profile2.jpg',
   siteName: 'Bardizba | Web Developer',
   siteUrl: "https://bardiz.digital",
   siteDescription: "Bardizba | Web Developer",
@@ -23,7 +24,7 @@ module.exports = {
           },
         },
         remark: {
-          plugins: ['@gridsome/remark-prismjs']
+          plugins: ['@gridsome/remark-prismjs', 'gridsome-plugin-remark-twitter']
         }
       }
     },

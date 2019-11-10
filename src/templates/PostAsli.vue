@@ -1,3 +1,4 @@
+
 <template>
   <Layout>
     <h1 v-if="$page.post">{{ $page.post.title }}</h1>

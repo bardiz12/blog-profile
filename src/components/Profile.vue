@@ -3,7 +3,7 @@
     <v-layout align-center justify-center>
       <v-flex xs8 sm8 md9 justify-center>
         <div class="profile">
-          <g-image src="@/assets/profile.jpg" alt="Photo" class="profile-img"></g-image>
+          <g-image src="@/assets/profile2.jpg" alt="Photo" class="profile-img"></g-image>
           <h1 class="font-weight-thin">Bardiz</h1>
           <template v-if="showdesc">
             <div class="mt-3"></div>

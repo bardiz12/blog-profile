@@ -44,58 +44,56 @@ export default function (Vue, { appOptions, router, head, isClient }) {
     content: 'Bardizba, Blog,CTF, News, Technology'
   });
 
-Vue.use(Vuetify, {
-  /*light: {
-    background: '#cccccc',
-    primary: '#3f51b5',
-    secondary: '#b0bec5',
-    accent: '#8c9eff',
-    error: '#b71c1c'
-  },
-  dark: {
-    background: '#555555',
-    primary: '#3f51b5',
-    secondary: '#b0bec5',
-    accent: '#8c9eff',
-    error: '#b71c1c'
-  }*/
-});
-if (isClient) {
-  var is_dark_enabled = localStorage.getItem('is_dark_enabled') !== null ? parseInt(localStorage.getItem('is_dark_enabled')) === 1 ? true : false : false;
-} else {
-  var is_dark_enabled = false;
-}
-const opts = {
-  theme: {
-    dark: is_dark_enabled,
-    //      primary: '#b747ff' //,
-    // success: '',
-    // info: '',
-    // error: ''
+  Vue.use(Vuetify, {
+    /*light: {
+      background: '#cccccc',
+      primary: '#3f51b5',
+      secondary: '#b0bec5',
+      accent: '#8c9eff',
+      error: '#b71c1c'
+    },
+    dark: {
+      background: '#555555',
+      primary: '#3f51b5',
+      secondary: '#b0bec5',
+      accent: '#8c9eff',
+      error: '#b71c1c'
+    }*/
+  });
+  if (isClient) {
+    var is_dark_enabled = localStorage.getItem('is_dark_enabled') !== null ? parseInt(localStorage.getItem('is_dark_enabled')) === 1 ? true : false : false;
+  } else {
+    var is_dark_enabled = false;
   }
-};
-appOptions.vuetify = new Vuetify(opts);
-
-
-Vue.mixin({
-  data: function () {
-    
-
-    return {
-      isDarkEnabled: is_dark_enabled,
+  const opts = {
+    theme: {
+      dark: is_dark_enabled,
+      //      primary: '#b747ff' //,
+      // success: '',
+      // info: '',
+      // error: ''
     }
-  },
-  watch: {
-    isDarkEnabled: function (val) {
-      if (isClient) {
-        localStorage.setItem('is_dark_enabled', val ? 1 : 0);
+  };
+  appOptions.vuetify = new Vuetify(opts);
+
+
+  Vue.mixin({
+    data: function () {
+      return {
+        isDarkEnabled: is_dark_enabled,
+      }
+    },
+    watch: {
+      isDarkEnabled: function (val) {
+        if (isClient) {
+          localStorage.setItem('is_dark_enabled', val ? 1 : 0);
+        }
       }
     }
-  }
-})
-console.log(appOptions);
-Vue.component('Layout', Layout);
-Vue.use(VueDisqus)
+  })
+  console.log(appOptions);
+  Vue.component('Layout', Layout);
+  Vue.use(VueDisqus)
   //console.log(Vue.$vuetify);
 
 }

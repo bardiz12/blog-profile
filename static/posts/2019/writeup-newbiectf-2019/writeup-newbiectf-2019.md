@@ -5,7 +5,7 @@ date: 2019-11-03
 author: Bardizba
 keywords: [WRITE-UP NewbieCTF 2019]
 description: WRITE-UP NewbieCTF 2019
-excerpt: WRITE-UP NewbieCTF 2019
+excerpt: NewbieCTF 2019. A cool CTF from CTF Team KorNewbie, Three High school clubs(D.I.S, CPU, N.I.T)newbie CTF cocok buat yang mau belajar CTF, karna soal nya masih tergolong mudah. sayangnya forensiknya file nya gede - gede wkwk. dan web exploit nya cuma satu.
 tags : ["ctf"]
 ---
 ![ctf](./gambar.png)
@@ -72,8 +72,9 @@ dan dipatkan flag :
 ```bash
 KorNewbie{H311o_h0w_@r3_y0u_d0lng?}
 ```
-
+<br/>
 ---
+    
 # Web Hacking
 ## Normal_Host
 ```
@@ -82,8 +83,8 @@ Normal_Host
 This is Just a Normal Host! Can you hack?
 Author: Y311J(신재욱)
 LINK:
-
 ```
+
 [LINK](https://internal.iwinv.net/)
 
 Awalnya pada kategori web hacking memiliki 2 Chals, dan 2 chals tersebut berada pada satu server. saat saya coba mencari flag chals pertama(chals tersebut bertipe RCE PHP) ternyata malah ketemu flag untuk chals yang ini wkwk.
@@ -97,3 +98,20 @@ Flag :
 ```
 KorNewbie{H0$7_$P1it_A774cK_U$3s_N0RM^liZ47ioN&##$%%!}
 ```
+
+<br/>
+---
+# Forensics
+## Rec
+
+```
+REC? Kion vi celas?
+```
+
+diberikan file REC.exe, decompile file tersebut dengan IDA, lalu kita lihat function - function yang ada. dan ternyata terdapat fungsi yang menampilkan flag sesuai formatnya.
+
+![ida-pro](./pics/ida.png)
+
+kita copy dan lakukan find and replace menggunakan VSCode.
+
+    Flag : KorNewbie{Recover_Signature}

@@ -4,7 +4,7 @@
       <g-link :to="post.node.path">{{ post.node.title }}</g-link>
     </h1>
 
-    <p class="post-summary" v-html="post.node.excerpt"></p>
+    <p class="post-summary" style="text-align:justify" v-html="post.node.excerpt"></p>
     <ul class="post-meta mt-n2">
       <li>
         <v-icon size="15">calendar_today</v-icon>
