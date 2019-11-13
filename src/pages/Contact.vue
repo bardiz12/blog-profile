@@ -22,31 +22,35 @@
           <h4 class>Personal Info</h4>
           <v-text-field
             v-model="formData.name"
-            :counter="10"
+            :counter="100"
             :rules="nameRules"
+            name="name"
             label="Name"
             required
           ></v-text-field>
 
           <v-text-field
             v-model="formData.email"
-            :counter="10"
+            :counter="100"
             :rules="emailRules"
+            name="email"
             label="Email"
             required
           ></v-text-field>
           <h4 class="mt-5">Message</h4>
           <v-text-field
             v-model="formData.subject"
-            :counter="10"
+            :counter="100"
+            name="subject"
             :rules="subjectRules"
             label="Subject"
             required
           ></v-text-field>
           <v-textarea
             v-model="formData.message"
-            :counter="10"
+            :counter="1000"
             :rules="messageRules"
+            name="message"
             label="Body"
             required
           ></v-textarea>
