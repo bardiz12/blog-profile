@@ -105,10 +105,13 @@ export default {
         .join("&");
     },
     sendMessage(e) {
-      fetch(e.target.getAttribute("name"), {
+      fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: this.encode(this.formData)
+        body: tthis.encode({
+          "form-name": e.target.getAttribute("name"),
+          ...this.formData
+        })
       })
         .then(() => {
           this.formSubmited = true;
