@@ -9,7 +9,6 @@
           name="contact"
           method="post"
           v-on:submit.prevent="sendMessage"
-          action="/success/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
@@ -106,13 +105,10 @@ export default {
         .join("&");
     },
     sendMessage(e) {
-      fetch("/", {
+      fetch(e.target.getAttribute("name"), {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: this.encode({
-          "form-name": e.target.getAttribute("name"),
-          ...this.formData
-        })
+        body: this.encode(this.formData)
       })
         .then(() => {
           this.formSubmited = true;
