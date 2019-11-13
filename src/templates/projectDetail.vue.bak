@@ -1,0 +1,80 @@
+<template>
+  <MainApp>
+    <ClientOnly>
+      <v-row v-if="projectsData !== null">
+      <v-col md="12" lg="12">
+        <!-- <v-carousel :show-arrows="true" hide-delimiters>
+            <v-carousel-item
+              v-for="(item,i) in projectsData.datas[$route.params.id].images"
+              :key="i"
+              :src="item"
+              lazy-src
+            ></v-carousel-item>
+        </v-carousel>-->
+      </v-col>
+      <v-col cols="12" md="12">
+        <h1>{{projectsData.datas[$route.params.id].title}}</h1>
+      </v-col>
+      <v-col cols="12" lg="8" md="8" offset-md="2" offset-lg="2" v-if="images!== null">
+        <!--<g-image :src="[0]"></g-image>-->
+      </v-col>
+      <v-col md="12" lg="12">
+        <h2>Description</h2>
+        <p class="text-justify">{{projectsData.datas[$route.params.id].details}}</p>
+        <h2>Tech's Talk</h2>
+        <p class="text-justify">{{projectsData.datas[$route.params.id].tech}}</p>
+        <h2>Client</h2>
+        <p>{{projectsData.datas[$route.params.id].client}}</p>
+      </v-col>
+    </v-row>
+    </ClientOnly>
+  </MainApp>
+</template>
+
+<style lang="scss">
+.lingallery_thumbnails_content_elem img {
+  height: 64px !important;
+  width: 64px !important;
+}
+</style>
+
+<script>
+import MainApp from "@/components/MainApp";
+import ProjectsData from "@/data/projectsData.js";
+export default {
+  metaInfo: {
+    title: "A | Projects"
+  },
+  data() {
+    return {
+      projectsData: null,
+      images: []
+    };
+  },
+  created() {
+    if (this.$store.state.isSidebarShowed) {
+      this.$store.commit("togglesidebar");
+    }
+    this.projectsData = ProjectsData;
+    if (this.projectsData.datas[this.$route.params.id] !== undefined) {
+      for (let i in this.projectsData.datas[this.$route.params.id].images) {
+        this.images.push({
+          src: this.projectsData.datas[this.$route.params.id].images[i],
+          thumbnail: this.projectsData.datas[this.$route.params.id].images[i]
+        });
+      }
+      console.log(this.projectsData.datas[this.$route.params.id]);
+      //this.metaInfo.title = "HAI";
+      console.log(this.images);
+    }
+  },
+  watch: {
+    projectsData: function() {
+      console.log(this.metaInfo);
+    }
+  },
+  components: {
+    MainApp
+  }
+};
+</script>

@@ -15,6 +15,9 @@
       <li>
         <g-link to="/about">About</g-link>
       </li>
+      <li>
+        <g-link to="/contact">Contact</g-link>
+      </li>
     </ul>
   </div>
 </template>

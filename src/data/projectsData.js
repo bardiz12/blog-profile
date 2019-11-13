@@ -1,5 +1,6 @@
 export default {
     datas : [
+        
         {
             title:"Pioneer Transactions Web Multi Languange",
             details:"Creating a mutli language system for a website",
@@ -66,27 +67,23 @@ export default {
                 require('../assets/project-image/gcZTb0p.png')
             ]           
         },
-        
         {
-            title: "Gondang Flora Database",
-            details: "This is the first project that i build using Vue for frontend. i create this project for one of my agenda in Community Service Program (we called it Kuliah Kerja Nyata or KKN). the idea is to collect all Flora's data that exists in place. and the data is stored in MySQL Database.",
-            tech: "i use Laravel for the backend and Vue.js for the frontend with Bootstrap CSS framework",
-            category: "Web Apps",
-            icon: "fa fa-globe",
-            color: "blue",
-            client: "TIM KKN Kemitraan Gondang 2019",
+            title: "SPAM Checker - Telegram Bot",
+            details: "A bot that check if a message is categorized as a SPAM (Promotion & Frauds) or HAM (Normal Message).",
+            tech: "This project is using dataset from http://nlp.yuliadi.pro/dataset. and Python with SKLearn library is used to build the machine learning model. for the Telegram bot hook i use Lumen Framework that calls api to the machile learing model through API Consuming. the API is created using Python Flask",
+            category: "Telegram Bot",
+            icon: "fa fa-robot",
+            color: "purple",
+            client: null,
             links:{
-                github: "https://github.com/bardiz12/flora-database",
-                url: "https://flora.gondang.id/"
+                github: null,
+                url:"https://t.me/BardSpamCheckerBot"
             },
             images:[
-                require('../assets/project-image/68070381-00b57f00-fda0-11e9-979c-535d764ab7e8.png'),
-                require('../assets/project-image/68070341-b0d6b800-fd9f-11e9-8a56-9db63c11d135.jpg'),
-                require('../assets/project-image/68070350-bfbd6a80-fd9f-11e9-919d-bc274ccc3e7d.png'),
-                
-                require('../assets/project-image/68070430-aff25600-fda0-11e9-8b62-049d4df6b686.png')
+                require('../assets/project-image/telegram.png')
             ]
-        },{
+        },        
+        {
             title: "Sistem Pendukung Keputusan AHP",
             details: "Sistem Pendukung Keputusan (DSS) yang dapat digunakan untuk membantu pemilihan keputusan dengan metode AHP (Analytical Hierarchy Process). Project aplikasi ini ditujukan untuk membantu permasalahan pendukung keputusan secara General.",
             tech: "i use laravel and SQLite for this project",
@@ -116,6 +113,25 @@ export default {
             images:[
                 'https://user-images.githubusercontent.com/25524265/68142817-bd573e00-ff62-11e9-969b-29ccd0d252d9.png'
             ]
+        },{
+            title: "Gondang Flora Database",
+            details: "This is the first project that i build using Vue for frontend. i create this project for one of my agenda in Community Service Program (we called it Kuliah Kerja Nyata or KKN). the idea is to collect all Flora's data that exists in place. and the data is stored in MySQL Database.",
+            tech: "i use Laravel for the backend and Vue.js for the frontend with Bootstrap CSS framework",
+            category: "Web Apps",
+            icon: "fa fa-globe",
+            color: "blue",
+            client: "TIM KKN Kemitraan Gondang 2019",
+            links:{
+                github: "https://github.com/bardiz12/flora-database",
+                url: "https://flora.gondang.id/"
+            },
+            images:[
+                require('../assets/project-image/68070381-00b57f00-fda0-11e9-979c-535d764ab7e8.png'),
+                require('../assets/project-image/68070341-b0d6b800-fd9f-11e9-8a56-9db63c11d135.jpg'),
+                require('../assets/project-image/68070350-bfbd6a80-fd9f-11e9-919d-bc274ccc3e7d.png'),
+                
+                require('../assets/project-image/68070430-aff25600-fda0-11e9-8b62-049d4df6b686.png')
+            ]
         },
         /*{
             title: "Rising Life",
@@ -123,7 +139,7 @@ export default {
         }*/
     ],
     colsSize:[
-        7,5,4,8,4,4,4
+        7,5,4,8,4,4,4,6
     ],
     getAllData(){
         return this.datas;

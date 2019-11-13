@@ -43,6 +43,8 @@
               <g-link class="link-second" to="/blog">Blog</g-link>
               <g-link class="link-second" to="/projects">Projects</g-link>
               <g-link class="link-second" to="/about#about">About</g-link>
+              <g-link class="link-second" to="/contact">Contact</g-link>
+              <a class="link-second" target="_blank" href="https://docs.google.com/document/d/1U2hiahqI3V-yBjoid0Xd41Mhi3JK3YYldfJ3ZWODy14/edit?usp=sharing">Resume</a>
             </div>
           </template>
           <h2></h2>
