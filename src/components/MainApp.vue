@@ -13,7 +13,8 @@
               <i v-else class="fa fa-angle-double-down"></i>
             </div>
           </div>
-          <Profile :socmed="true" />
+
+          <Profile :socmed="true" :class="`${!$store.state.isSidebarShowed ? 'pt-5' : ''}`"/>
         </div>
         <div v-bind:class="`kanan ${!$store.state.isSidebarShowed ? 'kanan-mini' : ''}`">
           <div class="content" v-bind:style="`${fullContent ? 'padding:0px' : ''}`">

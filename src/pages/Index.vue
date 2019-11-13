@@ -8,7 +8,7 @@
 import Profile from "../components/Profile";
 export default {
   metaInfo: {
-    title: "Portfolio"
+    title: "Home"
   },
   components: {
     Profile

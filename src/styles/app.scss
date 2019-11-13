@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
 body{
   scroll-behavior: smooth !important;
+  overflow-y: scroll;
 }
 .v-application {
   font-family: "Questrial", sans-serif;
@@ -471,3 +472,4 @@ ul.post-meta {
     margin: auto 20px;
   }
 }
+

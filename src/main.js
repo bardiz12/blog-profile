@@ -38,6 +38,10 @@ export default function (Vue, { appOptions, router, head, isClient }) {
   });
   head.link.push({
     rel: 'stylesheet',
+    href: 'https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css'
+  })
+  head.link.push({
+    rel: 'stylesheet',
     href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'
   });
   head.link.push({
@@ -57,6 +61,9 @@ export default function (Vue, { appOptions, router, head, isClient }) {
 
   
   Vue.use(Vuetify, {
+    icons: {
+      iconfont: 'mdiSvg',
+    },
     /*light: {
       background: '#cccccc',
       primary: '#3f51b5',
@@ -124,11 +131,17 @@ export default function (Vue, { appOptions, router, head, isClient }) {
 
   appOptions.store = new Vuex.Store({
     state: {
-      isSidebarShowed:true
+      isSidebarShowed:true,
+      isDialogShowed:false,
+      chosenProject:0,
     },
     mutations: {
       togglesidebar (state) {
         state.isSidebarShowed = ! state.isSidebarShowed;
+      },
+      choseproject(state,data){
+        state.chosenProject = data.chosenProject;
+        state.isDialogShowed = data.isDialogShowed;
       }
     }
   })

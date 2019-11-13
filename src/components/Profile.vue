@@ -58,6 +58,13 @@
               </template>
             </div>
           </div>
+
+          <!--<div class="mt-10" v-if="!mini ? !$store.state.isSidebarShowed : false ">
+            <v-btn outlined>
+              <i class="fa fa-angle-double-down"></i>
+            </v-btn>
+          </div>
+          -->
         </div>
         <slot></slot>
       </v-flex>
