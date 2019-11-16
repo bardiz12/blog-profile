@@ -21,7 +21,8 @@ open the url, and view source, you found the flag!
     Flag = JHDCTF{now_go_hack_the_planet}
 
 
-## &nbsp;
+<br/>
+
 ## The Assumption Song
 ```
 10
@@ -41,7 +42,8 @@ rename it to .png and found the flag.
     
     Flag = JHDCTF{not_everything_is_what_i_seem}
 
-## &nbsp;
+<br/>
+
 ## Orchestra
 ```
 25
@@ -60,7 +62,8 @@ b\`JHDCTF{there_is_no_orchestra_without_the_strings}
 Flag = JHDCTF{there_is_no_orchestra_without_the_strings}
 ```
 
-## &nbsp;
+<br/>
+
 ## Bae
 ```
 25
@@ -136,7 +139,8 @@ JHDCTF{base64_is_my_bae}
 
     Flag = JHDCTF{base64_is_my_bae}
 
-## &nbsp;
+<br/>
+
 ## Web Hunt
 ```
 25

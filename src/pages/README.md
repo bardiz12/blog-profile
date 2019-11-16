@@ -1,5 +1,12 @@
-Pages are usually used for normal pages or for listing items from a GraphQL collection.
-Add .vue files here to create pages. For example **About.vue** will be **site.com/about**.
-Learn more about pages: https://gridsome.org/docs/pages/
+# My Personal Static Portfolio & Blog site 
 
-You can delete this file.
+This project is created using : 
+
+1. Gridsome
+2. Vue.js
+3. Vuetify Css Framework
+
+deployed to Netlify.
+
+## Demo 
+[Visit My Personal Site](https://bardiz.digital)

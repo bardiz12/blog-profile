@@ -8,7 +8,7 @@ description: WRITE-UP JHDigitalCTF 2019 Forensics
 excerpt: Forensics Category Writeup for  Writeup JHDigitalCTF (John Hammond Digital CTF) 2019
 tags : ["ctf","jhdctf","Forensics"]
 ---
-## &bnsp;
+
 ## A Brisk Stroll
 ```
 80
@@ -25,7 +25,8 @@ strings a_brisk_stroll.jpg| grep -i jhd
 flag = JHDCTF{amongst_the_noise}
 ```
 
-## &nbsp;
+<br/>
+<br/>
 ## QUACK
 ```
 90

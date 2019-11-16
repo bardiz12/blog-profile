@@ -6,9 +6,9 @@
 
 module.exports = {
   icon: './src/assets/profile2.jpg',
-  siteName: 'Bardizba | Web Developer',
+  siteName: 'Bardizba | Fullstack Web Developer',
   siteUrl: "https://bardiz.digital",
-  siteDescription: "Bardizba | Web Developer",
+  siteDescription: "Bardizba Personal & Portfolio Site",
   plugins: [
     {
       use: '@gridsome/source-filesystem',

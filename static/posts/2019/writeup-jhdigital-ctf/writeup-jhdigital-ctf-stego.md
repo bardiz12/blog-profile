@@ -26,7 +26,8 @@ and then we use Stegsolve :
     Flag = JHDCTF{mystery_stegsolved}
 
 
-## &nbsp;
+<br/>
+
 ## Winter Wonderland
 ```
 80

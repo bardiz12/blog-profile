@@ -33,7 +33,10 @@ for i in range(0,34):
     print(chr(int(data[0].data)),end="")
 ``` 
 
-## nbsp;
+    Flag = JHDCTF{zbarimg_makes_qrcodes_easy}
+
+<br/>
+
 ## Pincode
 ```75
 This service needs a 4 digit pincode to authenticate... can you help me figure it out!??
@@ -82,7 +85,8 @@ CORRECT! Here is your flag: JHDCTF{for_i_in_{0000..9999}}
 
     Flag = JHDCTF{for_i_in_{0000..9999}}
 
-## nbsp;
+<br/>
+
 ## Loopback
 
 first,we dump the packet data :
@@ -122,7 +126,8 @@ JJHHDDCCTTFF{{iiccmmpp__iiss__tthhee__pprroottooccooll__ffoorr__mmee}}
 FLAG = JHDCTF{icmp_is_the_protocol_for_me}
 ```
 
-## &nbsp;
+<br/>
+
 ## Gammer
 ```
 125
@@ -169,7 +174,8 @@ print("FINAL FLAG = ",flag)
 
     Flag = JHDCTF{bruteforce_with_a_hammer}
 
-## &nbsp;
+<br/>
+
 ## CALC-UL8R
 ```
 150

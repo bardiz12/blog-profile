@@ -12,7 +12,7 @@
             <p>
               <strong>Hello</strong>, I am Moch
               <u style="font-weight:400">Bard</u>izba Zuhallalwansyach. a Freelance
-              <strong>Web Developer</strong> from Indonesia. Most of the projects i build are using Laravel for the backend and Vue or Jquery for the Frontend. I also a Student of Semarang State University and have interest in Cyber Security.
+              <strong>Fullstack Web Developer</strong> from Indonesia. Most of the projects i build are using Laravel for the backend and Vue or Jquery for the Frontend. I also have interest in Cyber Security.
             </p>
             <div class="mt-10"></div>
           </template>
