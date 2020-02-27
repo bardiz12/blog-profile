@@ -133,6 +133,21 @@ export default {
                 require('../assets/project-image/68070430-aff25600-fda0-11e9-8b62-049d4df6b686.png')
             ]
         },
+        {
+            title: "Risinglife | ",
+            details:"Rising Life merupakan layanan curhat berbasis psikologi yang dilakukan secara online maupun offline. Rising Life membantu anda menemukan ahli kesehatan mental secara mudah. Selain curhat, Rising Life juga menyediakan informasi seputar kesehatan mental yang dapat anda nikmati untuk menambah wawasan tentang kesehatan mental. Rising Life dibuat dengan tujuan sebagai tempat pertolongan pertama untuk anda yang memiliki permasalahan",
+            category:"Web Apps",
+            icon: "fa fa-globe",
+            client:"Putri Amalia",
+            color: "green",
+            tech:"-",
+            links:{
+                github: null,
+                url: "https://rising-life.social",
+            },images:[
+                require('../assets/project-image/rl.png')
+            ]
+        }
         /*{
             title: "Rising Life",
             details: "This is a web apps projects for peoples to find Psychologist and make an appointment (Online or Offline) with them."
