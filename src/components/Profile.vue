@@ -3,7 +3,7 @@
     <v-layout :align-center="!mini ? $store.state.isSidebarShowed : true" justify-center>
       <v-flex xs8 sm8 md9 justify-center>
         <div class="profile">
-          <g-image src="@/assets/newprofilemin.png" alt="Photo" class="profile-img"></g-image>
+          <g-image src="@/assets/newprofilekotak.jpg" alt="Photo" class="profile-img"></g-image>
           <h1 class="font-weight-thin d-none">Bardiz</h1>
            <h3 v-if="!mini ? $store.state.isSidebarShowed : true" class="text-uppercase">Bardizba</h3>
           <template v-if="showdesc">
