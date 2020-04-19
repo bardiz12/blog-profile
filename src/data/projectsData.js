@@ -147,6 +147,21 @@ export default {
             },images:[
                 require('../assets/project-image/rl.png')
             ]
+        },
+        {
+            title: "Covid19 Apps",
+            details:"A simple apps to retreive Statistical data of Corona Virus Disease (COVID-19) in Indonesia.",
+            category:"Mobile Web Apps",
+            icon: "fa fa-phone",
+            client:"-",
+            color: "green",
+            tech:"Vue.js Material Design",
+            links:{
+                github: "https://github.com/bardiz12/covid19-onsenui",
+                url: "https://id-covid-19.netlify.app/",
+            },images:[
+                require('../assets/project-image/covid.png')
+            ]
         }
         /*{
             title: "Rising Life",
@@ -154,7 +169,7 @@ export default {
         }*/
     ],
     colsSize:[
-        7,5,4,8,4,4,4,6
+        7,5,4,8,4,4,4,4,4,4
     ],
     getAllData(){
         return this.datas;
