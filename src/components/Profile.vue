@@ -25,10 +25,10 @@
               <a href="https://instagram.com/bardiz12" target="_blank">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="https://instagram.com/bardiz12" target="_blank">
+              <a href="https://twitter.com/bardiz12" target="_blank">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="https://instagram.com/bardiz12" target="_blank">
+              <a href="https://www.linkedin.com/in/bardizba-z-476464128/" target="_blank">
                 <i class="fab fa-linkedin"></i>
               </a>
             </div>
