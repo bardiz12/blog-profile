@@ -9,7 +9,7 @@
   "dependencies": {
     "@gridsome/remark-prismjs": "^0.2.0",
     "animate.css": "^3.7.2",
-    "gridsome": "^0.7.10",
+    "gridsome": "0.7.13",
     "gridsome-plugin-remark-shiki": "^0.3.1",
     "gridsome-plugin-remark-twitter": "^0.1.2",
     "vue-disqus": "^3.0.5",
