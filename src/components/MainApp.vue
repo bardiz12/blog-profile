@@ -27,6 +27,9 @@
 </template>
 
 <style lang="scss">
+#app {
+  
+}
 </style>
 <script>
 import Profile from "@/components/Profile";
